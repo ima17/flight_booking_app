@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 class ResultScreen extends StatefulWidget {
+  static const String id = 'results_screen';
   const ResultScreen({super.key});
 
   @override
