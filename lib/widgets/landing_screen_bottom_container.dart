@@ -1,21 +1,14 @@
 import 'package:flight_booking_app/widgets/date_picker_widget.dart';
+import 'package:flight_booking_app/widgets/passenger_luggage_widget.dart';
 import 'package:flutter/material.dart';
 
 import '../configs/palette.dart';
 import 'trip_selector_widget.dart';
 
-class LandingScreenBottomContainer extends StatefulWidget {
+class LandingScreenBottomContainer extends StatelessWidget {
   const LandingScreenBottomContainer({
     Key? key,
   }) : super(key: key);
-
-  @override
-  _LandingScreenBottomContainerState createState() =>
-      _LandingScreenBottomContainerState();
-}
-
-class _LandingScreenBottomContainerState
-    extends State<LandingScreenBottomContainer> {
 
   @override
   Widget build(BuildContext context) {
@@ -37,9 +30,13 @@ class _LandingScreenBottomContainerState
               children: [
                 TripSelectorWidget(),
                 SizedBox(
-                  height: 30,
+                  height: 40,
                 ),
                 DatePickerWidget(),
+                SizedBox(
+                  height: 40,
+                ),
+                PassengerLuggageWidget(),
               ],
             ),
           ),
