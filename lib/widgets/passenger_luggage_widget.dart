@@ -19,30 +19,24 @@ class PassengerLuggageWidget extends StatelessWidget {
           ),
           Row(
             children: [
-              SizedBox(
-                width: 90,
-                child: Expanded(
-                  child: TextFormField(
-                    decoration: const InputDecoration(
-                      hintText: "SEATS",
-                      prefixIcon:
-                          Icon(Icons.airline_seat_recline_normal),
-                    ),
+              Expanded(
+                child: TextFormField(
+                  decoration: const InputDecoration(
+                    hintText: "SEATS",
+                    prefixIcon:
+                        Icon(Icons.airline_seat_recline_normal),
                   ),
                 ),
               ),
               const SizedBox(
                 width: 50,
               ),
-              SizedBox(
-                width: 90,
-                child: Expanded(
-                  child: TextFormField(
-                    decoration: const InputDecoration(
-                      hintText: "KG",
-                      prefixIcon:
-                          Icon(Icons.airline_seat_recline_normal),
-                    ),
+              Expanded(
+                child: TextFormField(
+                  decoration: const InputDecoration(
+                    hintText: "KG",
+                    prefixIcon:
+                        Icon(Icons.airline_seat_recline_normal),
                   ),
                 ),
               ),
