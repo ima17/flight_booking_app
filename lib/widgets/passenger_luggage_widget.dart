@@ -9,41 +9,39 @@ class PassengerLuggageWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Expanded(
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          const Text(
-            "PASSENGER & LUGGAGE",
-            style: kLabelStyle,
-          ),
-          Row(
-            children: [
-              Expanded(
-                child: TextFormField(
-                  decoration: const InputDecoration(
-                    hintText: "SEATS",
-                    prefixIcon:
-                        Icon(Icons.airline_seat_recline_normal),
-                  ),
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        const Text(
+          "PASSENGER & LUGGAGE",
+          style: kLabelStyle,
+        ),
+        Row(
+          children: [
+            Expanded(
+              child: TextFormField(
+                decoration: const InputDecoration(
+                  hintText: "SEATS",
+                  prefixIcon:
+                      Icon(Icons.airline_seat_recline_normal),
                 ),
               ),
-              const SizedBox(
-                width: 50,
-              ),
-              Expanded(
-                child: TextFormField(
-                  decoration: const InputDecoration(
-                    hintText: "KG",
-                    prefixIcon:
-                        Icon(Icons.airline_seat_recline_normal),
-                  ),
+            ),
+            const SizedBox(
+              width: 50,
+            ),
+            Expanded(
+              child: TextFormField(
+                decoration: const InputDecoration(
+                  hintText: "KG",
+                  prefixIcon:
+                      Icon(Icons.airline_seat_recline_normal),
                 ),
               ),
-            ],
-          ),
-        ],
-      ),
+            ),
+          ],
+        ),
+      ],
     );
   }
 }

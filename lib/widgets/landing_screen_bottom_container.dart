@@ -1,5 +1,6 @@
 import 'package:flight_booking_app/widgets/date_picker_widget.dart';
 import 'package:flight_booking_app/widgets/passenger_luggage_widget.dart';
+import 'package:flight_booking_app/widgets/select_class_widget.dart';
 import 'package:flutter/material.dart';
 
 import '../configs/palette.dart';
@@ -37,6 +38,10 @@ class LandingScreenBottomContainer extends StatelessWidget {
                   height: 40,
                 ),
                 PassengerLuggageWidget(),
+                SizedBox(
+                  height: 40,
+                ),
+                SelectClassWidget(),
               ],
             ),
           ),
@@ -49,5 +54,3 @@ class LandingScreenBottomContainer extends StatelessWidget {
     );
   }
 }
-
-
