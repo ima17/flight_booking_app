@@ -1,7 +1,7 @@
+import 'package:flight_booking_app/constants/styles_constants.dart';
 import 'package:flight_booking_app/screens/results_screen.dart';
 import 'package:flutter/material.dart';
 
-import '../configs/palette.dart';
 import 'trip_selector_widget.dart';
 import 'date_picker_widget.dart';
 import 'passenger_luggage_widget.dart';
@@ -21,13 +21,7 @@ class LandingScreenBottomContainer extends StatelessWidget {
         clipBehavior: Clip.none,
         children: [
           Container(
-            decoration: const BoxDecoration(
-              color: Palette.whiteColor,
-              borderRadius: BorderRadius.only(
-                topLeft: Radius.circular(40.0),
-                topRight: Radius.circular(40.0),
-              ),
-            ),
+            decoration: kBottomContainerDecoration,
             child: SingleChildScrollView(
               padding: const EdgeInsets.fromLTRB(35, 35, 35, 0),
               child: Column(

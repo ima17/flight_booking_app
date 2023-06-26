@@ -8,3 +8,11 @@ const kLabelStyle = TextStyle(
   fontWeight: FontWeight.w500,
   fontSize: 12,
 );
+
+const kBottomContainerDecoration = BoxDecoration(
+  color: Palette.whiteColor,
+  borderRadius: BorderRadius.only(
+    topLeft: Radius.circular(40.0),
+    topRight: Radius.circular(40.0),
+  ),
+);
