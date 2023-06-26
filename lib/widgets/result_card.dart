@@ -70,8 +70,8 @@ class ResultCard extends StatelessWidget {
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Text(
-                          flight!.date,
+                        const Text(
+                          "DATE",
                           style: kLabelStyle,
                         ),
                         Text(
