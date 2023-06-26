@@ -1,18 +1,40 @@
-import 'package:flight_booking_app/configs/palette.dart';
-import 'package:flight_booking_app/configs/theme_constants.dart';
+import 'dart:convert';
+import 'package:flight_booking_app/models/flight_data.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart' show rootBundle;
 
+import '../configs/palette.dart';
+import '../configs/theme_constants.dart';
 import '../widgets/result_card.dart';
 
 class ResultScreen extends StatefulWidget {
   static const String id = 'results_screen';
-  const ResultScreen({super.key});
 
   @override
-  State<ResultScreen> createState() => _ResultScreenState();
+  _ResultScreenState createState() => _ResultScreenState();
 }
 
 class _ResultScreenState extends State<ResultScreen> {
+  List<Flight> flights = []; // List to store fetched flights
+
+  @override
+  void initState() {
+    super.initState();
+    fetchFlights(); // Fetch flights when the screen initializes
+  }
+
+  Future<void> fetchFlights() async {
+    final String jsonString =
+        await rootBundle.loadString('assets/mock/mockData.json');
+    final List<dynamic> jsonList = json.decode(jsonString);
+    final List<Flight> fetchedFlights =
+        jsonList.map((json) => Flight.fromJson(json)).toList();
+
+    setState(() {
+      flights = fetchedFlights;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -20,24 +42,26 @@ class _ResultScreenState extends State<ResultScreen> {
         title: const Text(
           "Flights",
           style: TextStyle(
-              fontSize: 24,
-              fontFamily: ThemeConstants.font,
-              fontWeight: FontWeight.w500,
-              color: Palette.normalTextColor),
+            fontSize: 24,
+            fontFamily: ThemeConstants.font,
+            fontWeight: FontWeight.w500,
+            color: Palette.normalTextColor,
+          ),
         ),
       ),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          const Padding(
-            padding: EdgeInsets.fromLTRB(20.0, 30.0, 0, 30.0),
+          Padding(
+            padding: const EdgeInsets.fromLTRB(20.0, 30.0, 0, 30.0),
             child: Text(
-              "4 flights available from Melbourne to Colombo",
+              "${flights.length} flights available from Melbourne to Colombo",
               style: TextStyle(
-                  fontSize: 14,
-                  fontFamily: ThemeConstants.font,
-                  fontWeight: FontWeight.w500,
-                  color: Palette.subtitleTextColor),
+                fontSize: 14,
+                fontFamily: ThemeConstants.font,
+                fontWeight: FontWeight.w500,
+                color: Palette.subtitleTextColor,
+              ),
             ),
           ),
           Expanded(
@@ -49,11 +73,9 @@ class _ResultScreenState extends State<ResultScreen> {
                   topRight: Radius.circular(40.0),
                 ),
               ),
-              child: const SingleChildScrollView(
+              child: SingleChildScrollView(
                 child: Column(
-                  children: [
-                    ResultCard(),
-                  ],
+                  children: flights.map((flight) => ResultCard(flight: flight)).toList(),
                 ),
               ),
             ),

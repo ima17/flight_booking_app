@@ -22,7 +22,7 @@ class MyApp extends StatelessWidget {
       initialRoute: LandingScreen.id,
       routes: {
         LandingScreen.id: (context) => const LandingScreen(),
-        ResultScreen.id: (context) => const ResultScreen(),
+        ResultScreen.id: (context) =>  ResultScreen(),
       },
     );
   }
