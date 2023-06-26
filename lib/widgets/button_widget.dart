@@ -17,18 +17,18 @@ class ButtonWidget extends StatelessWidget {
         decoration: BoxDecoration(
           color: Palette.themeBlueColor,
           borderRadius: BorderRadius.circular(20.0),
-          // // boxShadow: [
-          // //   BoxShadow(
-          // //     color: Colors.grey.withOpacity(0.25),
-          // //     spreadRadius: 3,
-          // //     blurRadius: 4,
-          // //     offset: const Offset(0, 3),
-          // //   ),
-          // ],
+          boxShadow: [
+            BoxShadow(
+              color: Colors.grey.withOpacity(0.25),
+              spreadRadius: 1,
+              blurRadius: 4,
+              offset: const Offset(0, 3),
+            ),
+          ],
         ),
         child: const SizedBox(
           height: 60.0,
-          width: 350,
+          width: double.infinity,
           child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../configs/palette.dart';
 import '../constants/styles_constants.dart';
 
 class PassengerLuggageWidget extends StatelessWidget {
@@ -19,24 +20,48 @@ class PassengerLuggageWidget extends StatelessWidget {
         Row(
           children: [
             Expanded(
-              child: TextFormField(
-                decoration: const InputDecoration(
-                  hintText: "SEATS",
-                  prefixIcon:
-                      Icon(Icons.airline_seat_recline_normal),
-                ),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  SizedBox(
+                    width: 90,
+                    child: TextFormField(
+                      decoration: const InputDecoration(
+                          hintText: "SEATS",
+                          border: InputBorder.none,
+                          prefixIcon: Icon(Icons.group,
+                              color: Palette.subtitleTextColor)),
+                    ),
+                  ),
+                  Container(
+                    width: 90,
+                    height: 1,
+                    color: Palette.greyColor,
+                  ),
+                ],
               ),
             ),
-            const SizedBox(
-              width: 50,
-            ),
             Expanded(
-              child: TextFormField(
-                decoration: const InputDecoration(
-                  hintText: "KG",
-                  prefixIcon:
-                      Icon(Icons.airline_seat_recline_normal),
-                ),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  SizedBox(
+                    width: 90,
+                    child: TextFormField(
+                      decoration: const InputDecoration(
+                        hintText: "KG",
+                        border: InputBorder.none,
+                        prefixIcon: Icon(Icons.luggage,
+                            color: Palette.subtitleTextColor),
+                      ),
+                    ),
+                  ),
+                  Container(
+                    width: 90,
+                    height: 1,
+                    color: Palette.greyColor,
+                  ),
+                ],
               ),
             ),
           ],

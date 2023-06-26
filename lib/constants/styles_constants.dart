@@ -20,12 +20,33 @@ const kBottomContainerDecoration = BoxDecoration(
 const kNormalTextStyle = TextStyle(
   color: Palette.normalTextColor,
   fontFamily: ThemeConstants.font,
-  fontWeight: FontWeight.normal,
+  fontWeight: FontWeight.w500,
   fontSize: 12,
 );
 
-const kResultsBigFont = TextStyle(
+const kResultsBigFontStyle = TextStyle(
     color: Palette.accentColor,
     fontFamily: ThemeConstants.font,
     fontWeight: FontWeight.w300,
     fontSize: 30);
+
+const kTripSelectorBigFontStyle = TextStyle(
+  color: Palette.darkBlueColor,
+  fontFamily: ThemeConstants.font,
+  fontWeight: FontWeight.w500,
+  fontSize: 40,
+);
+
+const kTextButtonStyle = TextStyle(
+  color: Palette.subtitleTextColor,
+  fontFamily: ThemeConstants.font,
+  fontWeight: FontWeight.w500,
+  fontSize: 16,
+);
+
+const kSelectedTextButtonStyle = TextStyle(
+  color: Palette.normalTextColor,
+  fontFamily: ThemeConstants.font,
+  fontWeight: FontWeight.w500,
+  fontSize: 16,
+);

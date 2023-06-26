@@ -21,7 +21,9 @@ class _DatePickerWidgetState extends State<DatePickerWidget> {
         CalenderWidget(
           label: 'DEPART',
         ),
-        CalenderWidget(label: "RETURN")
+        CalenderWidget(
+          label: "RETURN",
+        ),
       ],
     );
   }

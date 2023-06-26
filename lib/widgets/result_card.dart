@@ -33,7 +33,7 @@ class ResultCard extends StatelessWidget {
                       children: [
                         Text(
                           "CGK",
-                          style: kResultsBigFont,
+                          style: kResultsBigFontStyle,
                         ),
                         Text(
                           "Jakarta",
@@ -47,7 +47,7 @@ class ResultCard extends StatelessWidget {
                       children: [
                         Text(
                           "LCY",
-                          style: kResultsBigFont,
+                          style: kResultsBigFontStyle,
                         ),
                         Text(
                           "London",

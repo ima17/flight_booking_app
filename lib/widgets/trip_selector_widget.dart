@@ -1,5 +1,3 @@
-import 'package:flight_booking_app/configs/theme_constants.dart';
-import 'package:flight_booking_app/configs/palette.dart';
 import 'package:flight_booking_app/constants/styles_constants.dart';
 import 'package:flutter/material.dart';
 
@@ -8,27 +6,22 @@ class TripSelectorWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Row(
+    return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         Expanded(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text(
+              const Text(
                 "FROM",
                 style: kLabelStyle,
               ),
-              Text(
+              const Text(
                 "MLB",
-                style: TextStyle(
-                  color: Palette.darkBlueColor,
-                  fontFamily: ThemeConstants.font,
-                  fontWeight: FontWeight.w500,
-                  fontSize: 40,
-                ),
+                style: kTripSelectorBigFontStyle,
               ),
-              SizedBox(
+              const SizedBox(
                 width: 90,
                 child: TextField(
                   textAlign: TextAlign.center,
@@ -36,31 +29,32 @@ class TripSelectorWidget extends StatelessWidget {
                   decoration: InputDecoration(
                     hintText: "Melbourne",
                     hintStyle: kNormalTextStyle,
+                    border: InputBorder.none,
                   ),
                 ),
+              ),
+              Container(
+                width: 90,
+                height: 1,
+                color: Colors.grey,
               ),
             ],
           ),
         ),
-        Image(image: AssetImage("assets/icons/icon1.png")),
+        const Image(image: AssetImage("assets/icons/icon1.png")),
         Expanded(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.end,
             children: [
-              Text(
+              const Text(
                 "TO",
                 style: kLabelStyle,
               ),
-              Text(
+              const Text(
                 "CLB",
-                style: TextStyle(
-                  color: Palette.darkBlueColor,
-                  fontFamily: ThemeConstants.font,
-                  fontWeight: FontWeight.w500,
-                  fontSize: 40,
-                ),
+                style: kTripSelectorBigFontStyle,
               ),
-              SizedBox(
+              const SizedBox(
                 width: 90,
                 child: TextField(
                   textAlign: TextAlign.center,
@@ -68,8 +62,14 @@ class TripSelectorWidget extends StatelessWidget {
                   decoration: InputDecoration(
                     hintText: "Colombo",
                     hintStyle: kNormalTextStyle,
+                    border: InputBorder.none,
                   ),
                 ),
+              ),
+              Container(
+                width: 90,
+                height: 1,
+                color: Colors.grey,
               ),
             ],
           ),

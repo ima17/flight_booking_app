@@ -1,3 +1,4 @@
+import 'package:flight_booking_app/configs/palette.dart';
 import 'package:flutter/material.dart';
 
 import '../constants/styles_constants.dart';
@@ -25,35 +26,35 @@ class SelectClassWidget extends StatelessWidget {
               onTap: () {},
               child: const Text(
                 "Economy",
-                style: TextStyle(),
+                style: kSelectedTextButtonStyle,
               ),
             ),
             const SizedBox(width: 15),
             Container(
               width: 1,
               height: 15,
-              color: Colors.black,
+              color: Palette.subtitleTextColor,
             ),
             const SizedBox(width: 30),
             GestureDetector(
               onTap: () {},
               child: const Text(
                 "Business",
-                style: TextStyle(),
+                style: kTextButtonStyle,
               ),
             ),
             const SizedBox(width: 15),
             Container(
               width: 1,
               height: 15,
-              color: Colors.black,
+              color: Palette.subtitleTextColor,
             ),
             const SizedBox(width: 30),
             GestureDetector(
               onTap: () {},
               child: const Text(
                 "First Class",
-                style: TextStyle(),
+                style: kTextButtonStyle,
               ),
             ),
           ],

@@ -1,3 +1,5 @@
+import 'package:flight_booking_app/configs/palette.dart';
+import 'package:flight_booking_app/configs/theme_constants.dart';
 import 'package:flight_booking_app/constants/styles_constants.dart';
 import 'package:flight_booking_app/screens/results_screen.dart';
 import 'package:flutter/material.dart';
@@ -46,13 +48,46 @@ class LandingScreenBottomContainer extends StatelessWidget {
           ),
           Positioned(
             top: -40.0,
-            left: 0,
+            left: 40,
             right: 0,
             child: Container(
               alignment: Alignment.center,
-              child: const Text(
-                "One way",
-                style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+              child: Row(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      const Text(
+                        "Round Trip",
+                        style: TextStyle(
+                            fontSize: 16,
+                            fontWeight: FontWeight.w600,
+                            fontFamily: ThemeConstants.font,
+                            color: Palette.whiteColor),
+                      ),
+                      const SizedBox(
+                        height: 5,
+                      ),
+                      Container(
+                        width: 25,
+                        height: 3,
+                        color: Palette.whiteColor,
+                      ),
+                    ],
+                  ),
+                  const SizedBox(
+                    width: 50,
+                  ),
+                  const Text(
+                    "One way",
+                    style: TextStyle(
+                        fontSize: 16,
+                        fontWeight: FontWeight.w600,
+                        fontFamily: ThemeConstants.font,
+                        color: Palette.whiteColor),
+                  ),
+                ],
               ),
             ),
           ),

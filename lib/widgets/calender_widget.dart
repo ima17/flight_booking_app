@@ -1,3 +1,4 @@
+import 'package:flight_booking_app/configs/palette.dart';
 import 'package:flutter/material.dart';
 
 import '../configs/theme_constants.dart';
@@ -5,7 +6,7 @@ import '../constants/styles_constants.dart';
 
 class CalenderWidget extends StatefulWidget {
   final String label;
-  const CalenderWidget({super.key, required this.label});
+  const CalenderWidget({Key? key, required this.label}) : super(key: key);
 
   @override
   State<CalenderWidget> createState() => _CalenderWidgetState();
@@ -30,30 +31,37 @@ class _CalenderWidgetState extends State<CalenderWidget> {
           onTap: () {
             _showDatePicker(context);
           },
-          child: DecoratedBox(
-            decoration: const BoxDecoration(
-              border: Border(
-                bottom: BorderSide(
-                  color: Colors.grey,
-                  width: 1.0,
-                ),
-              ),
-            ),
-            child: Row(
-              children: [
-                const Icon(Icons.calendar_today),
-                const SizedBox(width: 10),
-                Text(
-                  selectedDate != null ? formatDate(selectedDate!) : "DD/MM/YY",
-                  style: const TextStyle(
-                    color: Colors.grey,
-                    fontFamily: ThemeConstants.font,
-                    fontWeight: FontWeight.w500,
-                    fontSize: 16,
+          child: Column(
+            children: [
+              Row(
+                children: [
+                  const Icon(
+                    Icons.calendar_month,
+                    color: Palette.subtitleTextColor,
                   ),
-                ),
-              ],
-            ),
+                  const SizedBox(width: 10),
+                  Text(
+                    selectedDate != null
+                        ? formatDate(selectedDate!)
+                        : "DD/MM/YY",
+                    style: const TextStyle(
+                      color: Colors.grey,
+                      fontFamily: ThemeConstants.font,
+                      fontWeight: FontWeight.w500,
+                      fontSize: 16,
+                    ),
+                  ),
+                ],
+              ),
+              const SizedBox(
+                height: 10,
+              ),
+              Container(
+                width: 90,
+                height: 1,
+                color: Colors.grey,
+              ),
+            ],
           ),
         ),
       ],
