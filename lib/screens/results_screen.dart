@@ -31,7 +31,14 @@ class _ResultScreenState extends State<ResultScreen> {
         children: [
           const Padding(
             padding: EdgeInsets.fromLTRB(20.0, 30.0, 0, 30.0),
-            child: Text("4 flights available from Melbourne to Colombo"),
+            child: Text(
+              "4 flights available from Melbourne to Colombo",
+              style: TextStyle(
+                  fontSize: 14,
+                  fontFamily: ThemeConstants.font,
+                  fontWeight: FontWeight.w500,
+                  color: Palette.subtitleTextColor),
+            ),
           ),
           Expanded(
             child: Container(
@@ -42,10 +49,12 @@ class _ResultScreenState extends State<ResultScreen> {
                   topRight: Radius.circular(40.0),
                 ),
               ),
-              child: const Column(
-                children: [
-                  ResultCard(),
-                ],
+              child: const SingleChildScrollView(
+                child: Column(
+                  children: [
+                    ResultCard(),
+                  ],
+                ),
               ),
             ),
           ),

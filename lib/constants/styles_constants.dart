@@ -16,3 +16,16 @@ const kBottomContainerDecoration = BoxDecoration(
     topRight: Radius.circular(40.0),
   ),
 );
+
+const kNormalTextStyle = TextStyle(
+  color: Palette.normalTextColor,
+  fontFamily: ThemeConstants.font,
+  fontWeight: FontWeight.normal,
+  fontSize: 12,
+);
+
+const kResultsBigFont = TextStyle(
+    color: Palette.accentColor,
+    fontFamily: ThemeConstants.font,
+    fontWeight: FontWeight.w300,
+    fontSize: 30);

@@ -33,13 +33,12 @@ class ResultCard extends StatelessWidget {
                       children: [
                         Text(
                           "CGK",
-                          style: TextStyle(
-                              color: Palette.accentColor,
-                              fontFamily: ThemeConstants.font,
-                              fontWeight: FontWeight.w300,
-                              fontSize: 30),
+                          style: kResultsBigFont,
                         ),
-                        Text("Jakarta"),
+                        Text(
+                          "Jakarta",
+                          style: kNormalTextStyle,
+                        ),
                       ],
                     ),
                     Image(image: AssetImage("assets/icons/emirates.png")),
@@ -48,13 +47,12 @@ class ResultCard extends StatelessWidget {
                       children: [
                         Text(
                           "LCY",
-                          style: TextStyle(
-                              color: Palette.accentColor,
-                              fontFamily: ThemeConstants.font,
-                              fontWeight: FontWeight.w300,
-                              fontSize: 30),
+                          style: kResultsBigFont,
                         ),
-                        Text("London"),
+                        Text(
+                          "London",
+                          style: kNormalTextStyle,
+                        ),
                       ],
                     ),
                   ],
@@ -66,27 +64,47 @@ class ResultCard extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
                           "DATE",
                           style: kLabelStyle,
                         ),
-                        Text("data"),
+                        Text(
+                          "9 DEC",
+                          style: kNormalTextStyle,
+                        ),
                       ],
                     ),
                     Column(
+                      crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
                         Image(image: AssetImage("assets/icons/ellipse.png")),
-                        Text("1h 35m, 10.35 AM"),
+                        SizedBox(
+                          height: 5,
+                        ),
+                        Text(
+                          "1h 35m, 10.35 AM",
+                          style: TextStyle(
+                            fontFamily: ThemeConstants.font,
+                            fontSize: 10,
+                            fontWeight: FontWeight.w500,
+                            color: Palette.normalTextColor,
+                          ),
+                        ),
                       ],
                     ),
                     Column(
+                      crossAxisAlignment: CrossAxisAlignment.end,
                       children: [
                         Text(
-                          "TIME",
+                          "FLIGHT NO",
                           style: kLabelStyle,
                         ),
-                        Text("data"),
+                        Text(
+                          "KB765",
+                          style: kNormalTextStyle,
+                        ),
                       ],
                     ),
                   ],
@@ -110,11 +128,27 @@ class ResultCard extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.end,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                Text("Ticket Price"),
+                Text(
+                  "Ticket Price",
+                  style: TextStyle(
+                    fontFamily: ThemeConstants.font,
+                    fontSize: 10,
+                    fontWeight: FontWeight.w500,
+                    color: Palette.subtitleTextColor,
+                  ),
+                ),
                 SizedBox(
                   width: 40,
                 ),
-                Text("IDR 350,000"),
+                Text(
+                  "IDR 350,000",
+                  style: TextStyle(
+                    fontFamily: ThemeConstants.font,
+                    fontSize: 14,
+                    fontWeight: FontWeight.w500,
+                    color: Palette.normalTextColor,
+                  ),
+                ),
               ],
             ),
           ),

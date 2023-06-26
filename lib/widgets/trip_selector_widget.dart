@@ -32,20 +32,10 @@ class TripSelectorWidget extends StatelessWidget {
                 width: 90,
                 child: TextField(
                   textAlign: TextAlign.center,
-                  style: TextStyle(
-                    color: Palette.normalTextColor,
-                    fontFamily: ThemeConstants.font,
-                    fontWeight: FontWeight.w500,
-                    fontSize: 12,
-                  ),
+                  style: kNormalTextStyle,
                   decoration: InputDecoration(
                     hintText: "Melbourne",
-                    hintStyle: TextStyle(
-                      color: Palette.normalTextColor,
-                      fontFamily: ThemeConstants.font,
-                      fontWeight: FontWeight.normal,
-                      fontSize: 12,
-                    ),
+                    hintStyle: kNormalTextStyle,
                   ),
                 ),
               ),
@@ -74,20 +64,10 @@ class TripSelectorWidget extends StatelessWidget {
                 width: 90,
                 child: TextField(
                   textAlign: TextAlign.center,
-                  style: TextStyle(
-                    color: Palette.normalTextColor,
-                    fontFamily: ThemeConstants.font,
-                    fontWeight: FontWeight.w500,
-                    fontSize: 12,
-                  ),
+                  style: kNormalTextStyle,
                   decoration: InputDecoration(
                     hintText: "Colombo",
-                    hintStyle: TextStyle(
-                      color: Palette.normalTextColor,
-                      fontFamily: ThemeConstants.font,
-                      fontWeight: FontWeight.normal,
-                      fontSize: 12,
-                    ),
+                    hintStyle: kNormalTextStyle,
                   ),
                 ),
               ),
