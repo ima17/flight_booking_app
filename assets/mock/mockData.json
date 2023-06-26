@@ -1,0 +1,36 @@
+[
+    {
+      "startCityCode": "CGK",
+      "startCity": "Jakarta",
+      "endCityCode": "LCY",
+      "endCity": "London",
+      "imageUrl": "assets/icons/emirates.png",
+      "date": "9 DEC",
+      "time": "1h 35m, 10.35 AM",
+      "flightNo": "KB766",
+      "ticketPrice": "IDR 350,000"
+    },
+    {
+      "startCityCode": "LCY",
+      "startCity": "London",
+      "endCityCode": "NYC",
+      "endCity": "New York",
+      "imageUrl": "assets/icons/emirates.png",
+      "date": "10 DEC",
+      "time": "7h 30m, 8.00 AM",
+      "flightNo": "NY123",
+      "ticketPrice": "IDR 1,000,000"
+    },
+    {
+      "startCityCode": "NYC",
+      "startCity": "New York",
+      "endCityCode": "CGK",
+      "endCity": "Jakarta",
+      "imageUrl": "assets/icons/emirates.png",
+      "date": "11 DEC",
+      "time": "15h 45m, 9.00 PM",
+      "flightNo": "JK789",
+      "ticketPrice": "IDR 1,500,000"
+    }
+  ]
+  
