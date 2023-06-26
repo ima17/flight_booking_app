@@ -26,6 +26,7 @@ class PassengerLuggageWidget extends StatelessWidget {
                   SizedBox(
                     width: 90,
                     child: TextFormField(
+                      keyboardType: TextInputType.number,
                       decoration: const InputDecoration(
                           hintText: "SEATS",
                           border: InputBorder.none,
@@ -48,6 +49,7 @@ class PassengerLuggageWidget extends StatelessWidget {
                   SizedBox(
                     width: 90,
                     child: TextFormField(
+                      keyboardType: TextInputType.number,
                       decoration: const InputDecoration(
                         hintText: "KG",
                         border: InputBorder.none,

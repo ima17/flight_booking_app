@@ -25,7 +25,7 @@ class LandingScreenBottomContainer extends StatelessWidget {
           Container(
             decoration: kBottomContainerDecoration,
             child: SingleChildScrollView(
-              padding: const EdgeInsets.fromLTRB(35, 35, 35, 0),
+              padding: const EdgeInsets.fromLTRB(35, 35, 35, 35),
               child: Column(
                 children: [
                   const TripSelectorWidget(),
@@ -35,11 +35,11 @@ class LandingScreenBottomContainer extends StatelessWidget {
                   const PassengerLuggageWidget(),
                   const SizedBox(height: 40),
                   const SelectClassWidget(),
-                  const SizedBox(height: 40),
+                  const SizedBox(height: 60),
                   ButtonWidget(
                     label: 'Search Fights',
-                    onPressed: () async {
-                      await Navigator.pushNamed(context, ResultScreen.id);
+                    onPressed: () {
+                      Navigator.pushNamed(context, ResultScreen.id);
                     },
                   ),
                 ],
