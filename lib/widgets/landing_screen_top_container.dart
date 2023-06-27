@@ -24,7 +24,7 @@ class LandingScreenTopContainer extends StatelessWidget {
             left: 40,
             right: 0,
             top: MediaQuery.of(context).size.height *
-                0.1, // Adjust this value as needed
+                0.1, 
             child: const Text(
               "Plan Your\njourney",
               textAlign: TextAlign.left,

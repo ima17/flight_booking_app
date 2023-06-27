@@ -10,17 +10,19 @@ import '../widgets/result_card.dart';
 class ResultScreen extends StatefulWidget {
   static const String id = 'results_screen';
 
+  const ResultScreen({super.key});
+
   @override
-  _ResultScreenState createState() => _ResultScreenState();
+  State<ResultScreen> createState() => _ResultScreenState();
 }
 
 class _ResultScreenState extends State<ResultScreen> {
-  List<Flight> flights = []; // List to store fetched flights
+  List<Flight> flights = [];
 
   @override
   void initState() {
     super.initState();
-    fetchFlights(); // Fetch flights when the screen initializes
+    fetchFlights();
   }
 
   Future<void> fetchFlights() async {
@@ -56,7 +58,7 @@ class _ResultScreenState extends State<ResultScreen> {
             padding: const EdgeInsets.fromLTRB(20.0, 30.0, 0, 30.0),
             child: Text(
               "${flights.length} flights available from Melbourne to Colombo",
-              style: TextStyle(
+              style: const TextStyle(
                 fontSize: 14,
                 fontFamily: ThemeConstants.font,
                 fontWeight: FontWeight.w500,
@@ -75,7 +77,9 @@ class _ResultScreenState extends State<ResultScreen> {
               ),
               child: SingleChildScrollView(
                 child: Column(
-                  children: flights.map((flight) => ResultCard(flight: flight)).toList(),
+                  children: flights
+                      .map((flight) => ResultCard(flight: flight))
+                      .toList(),
                 ),
               ),
             ),
